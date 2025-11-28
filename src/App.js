@@ -3,10 +3,13 @@ import './App.css';
 import ResponsiveAppBar from './components/appBar.jsx';
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   const [cartOpen, setCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
+  const [currentPage, setCurrentPage] = useState('produtos');
 
   const handleAddToCart = (product) => {
     setCartItems((prevItems) => {
@@ -43,7 +46,9 @@ function App() {
         cartCount={cartItems.length}
         onCartClick={() => setCartOpen(true)}
       />
-      <ProductList onAddToCart={handleAddToCart} />
+      {currentPage === 'produtos' && <ProductList onAddToCart={handleAddToCart} />}
+      {currentPage === 'sobre' && <About />}
+      {currentPage === 'contato' && <Contact />}
       <Cart
         open={cartOpen}
         onClose={() => setCartOpen(false)}

@@ -1,4 +1,4 @@
-﻿import * as React from 'react';
+import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -34,14 +34,14 @@ const ResponsiveAppBar = ({ cartCount = 0, onCartClick, onNavigate, currentPage 
   };
 
   return (
-    <AppBar position=static sx={{ backgroundColor: '#2d5016' }}>
-      <Container maxWidth=xl>
+    <AppBar position="static" sx={{ backgroundColor: '#2d5016' }}>
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LocalFloristIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: 28 }} />
           <Typography
-            variant=h6
+            variant="h6"
             noWrap
-            component=div
+            component="div"
             onClick={() => onNavigate('produtos')}
             sx={{
               mr: 2,
@@ -59,17 +59,17 @@ const ResponsiveAppBar = ({ cartCount = 0, onCartClick, onNavigate, currentPage 
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
-              size=large
-              aria-label=menu
-              aria-controls=menu-appbar
-              aria-haspopup=true
+              size="large"
+              aria-label="menu"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color=inherit
+              color="inherit"
             >
               <MenuIcon />
             </IconButton>
             <Menu
-              id=menu-appbar
+              id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
@@ -88,16 +88,16 @@ const ResponsiveAppBar = ({ cartCount = 0, onCartClick, onNavigate, currentPage 
             >
               {pages.map((page) => (
                 <MenuItem key={page.key} onClick={() => handleCloseNavMenu(page.key)}>
-                  <Typography textAlign=center>{page.label}</Typography>
+                  <Typography textAlign="center">{page.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <LocalFloristIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
-            variant=h5
+            variant="h5"
             noWrap
-            component=div
+            component="div"
             onClick={() => onNavigate('produtos')}
             sx={{
               mr: 2,
@@ -137,7 +137,7 @@ const ResponsiveAppBar = ({ cartCount = 0, onCartClick, onNavigate, currentPage 
 
           <Box sx={{ flexGrow: 0 }}>
             <IconButton onClick={onCartClick} sx={{ p: 1, color: 'white' }}>
-              <Badge badgeContent={cartCount} color=error>
+              <Badge badgeContent={cartCount} color="error">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>

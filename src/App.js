@@ -45,6 +45,8 @@ function App() {
       <ResponsiveAppBar
         cartCount={cartItems.length}
         onCartClick={() => setCartOpen(true)}
+        onNavigate={setCurrentPage}
+        currentPage={currentPage}
       />
       {currentPage === 'produtos' && <ProductList onAddToCart={handleAddToCart} />}
       {currentPage === 'sobre' && <About />}

@@ -20,6 +20,10 @@ Desenvolvemos uma aplicação React moderna que funciona como uma loja online co
 - **JavaScript (ES6+)** - Lógica da aplicação
 
 ## 🚀 Como Usar
+## 🎥 Demonstração
+https://github.com/user-attachments/assets/1a3ca9b8-06de-46c8-8c3b-7dbed5b79c9d
+
+
 
 ### Instalação
 ```bash
